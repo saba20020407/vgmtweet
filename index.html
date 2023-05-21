@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ツイート作成ボタン</title>
+  <style>
+    #tweetButton {
+      padding: 10px 20px;
+      background-color: #1DA1F2;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #tweetButton:hover {
+      background-color: #0c83d6;
+    }
+  </style>
+</head>
+<body>
+  <button id="tweetButton">ツイート作成</button>
+
+  <script>
+    document.getElementById('tweetButton').addEventListener('click', function() {
+      var tweetText = "ここにツイートのテキストを入力してください";
+      var tweetUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
+      window.open(tweetUrl);
+    });
+  </script>
+</body>
+</html>
